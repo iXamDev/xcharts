@@ -1,0 +1,34 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS", "iOS", "{0C9179A0-3BDB-4265-BBF1-A9C9B1604F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCharts.iOS", "iOS\XCharts.iOS\XCharts.iOS.csproj", "{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Debug|x86.Build.0 = Debug|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Release|x86.ActiveCfg = Release|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Release|x86.Build.0 = Release|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Release|iPhone.Build.0 = Release|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}.Debug|iPhone.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADB43010-EED9-4D1B-A2DD-D6B2FA571452} = {0C9179A0-3BDB-4265-BBF1-A9C9B1604F3A}
+	EndGlobalSection
+EndGlobal
