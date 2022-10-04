@@ -1,160 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADB43010-EED9-4D1B-A2DD-D6B2FA571452}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <RootNamespace>XCharts.iOS</RootNamespace>
-    <AssemblyName>XCharts.iOS</AssemblyName>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>64454</IOSDebuggerPort>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
-    <MtouchVerbosity></MtouchVerbosity>
-    <MtouchLink></MtouchLink>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <DefineConstants></DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <MtouchVerbosity></MtouchVerbosity>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Implementation\" />
-    <Folder Include="Views\" />
-    <Folder Include="Views\Base\" />
-    <Folder Include="Views\Line\" />
-    <Folder Include="Implementation\ViewPort\" />
-    <Folder Include="Abstract\ViewPort\" />
-    <Folder Include="Models\" />
-    <Folder Include="Models\ViewPort\" />
-    <Folder Include="Abstract\DataSources\" />
-    <Folder Include="Abstract\Entries\" />
-    <Folder Include="Implementation\DataSources\" />
-    <Folder Include="Implementation\Entries\" />
-    <Folder Include="Models\Axises\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Abstract\Chart\" />
-    <Folder Include="Abstract\Axises\" />
-    <Folder Include="Abstract\Renders\" />
-    <Folder Include="Models\Renders\" />
-    <Folder Include="Models\Renders\Point\" />
-    <Folder Include="Implementation\Axises\" />
-    <Folder Include="Implementation\Renders\" />
-    <Folder Include="Models\Styles\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Models\Renders\Axis\" />
-    <Folder Include="Abstract\Handlers\" />
-    <Folder Include="Abstract\Handlers\Tap\" />
-    <Folder Include="Implementation\Handlers\" />
-    <Folder Include="Implementation\Handlers\Tap\" />
-    <Folder Include="Abstract\Handlers\Highlight\" />
-    <Folder Include="Views\Chart\" />
-    <Folder Include="Abstract\Managers\" />
-    <Folder Include="Implementation\Manager\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Line\LineChartView.cs" />
-    <Compile Include="Views\Base\BaseChartView.cs" />
-    <Compile Include="Implementation\ViewPort\ViewPort.cs" />
-    <Compile Include="Abstract\ViewPort\IViewPort.cs" />
-    <Compile Include="Models\ViewPort\Direction.cs" />
-    <Compile Include="Abstract\DataSources\IChartDataSource.cs" />
-    <Compile Include="Abstract\Entries\ICartesianEntry.cs" />
-    <Compile Include="Abstract\Entries\IPointEntry.cs" />
-    <Compile Include="Abstract\DataSources\ICartesianDataSource.cs" />
-    <Compile Include="Abstract\DataSources\IPointDataSource.cs" />
-    <Compile Include="Implementation\DataSources\BaseChartDataSource.cs" />
-    <Compile Include="Implementation\DataSources\BasePointChartDataSource.cs" />
-    <Compile Include="Implementation\DataSources\IndexValueDataSource.cs" />
-    <Compile Include="Implementation\Entries\PointEntry.cs" />
-    <Compile Include="Models\Axises\HorizontalAxisDependency.cs" />
-    <Compile Include="Views\Base\BasePointChartView.cs" />
-    <Compile Include="Helpers\PerfomanceHelper.cs" />
-    <Compile Include="Abstract\ViewPort\IViewPortMovementAnimator.cs" />
-    <Compile Include="Abstract\Chart\IChartView.cs" />
-    <Compile Include="Implementation\ViewPort\ViewPortMovementAnimator.cs" />
-    <Compile Include="Abstract\Axises\IAxis.cs" />
-    <Compile Include="Abstract\Axises\IXAxis.cs" />
-    <Compile Include="Abstract\Axises\IYAxis.cs" />
-    <Compile Include="Abstract\Axises\IAxisDisplayValueFormatter.cs" />
-    <Compile Include="Abstract\Renders\IRender.cs" />
-    <Compile Include="Abstract\Renders\IPointRender.cs" />
-    <Compile Include="Models\Renders\Point\PointRenderStyle.cs" />
-    <Compile Include="Implementation\Axises\XAxis.cs" />
-    <Compile Include="Implementation\Axises\YAxis.cs" />
-    <Compile Include="Implementation\Renders\PointRender.cs" />
-    <Compile Include="Models\Styles\MarkerStyle.cs" />
-    <Compile Include="Models\Styles\LineStyle.cs" />
-    <Compile Include="Models\Styles\TextStyle.cs" />
-    <Compile Include="Models\Styles\BaseStyle.cs" />
-    <Compile Include="Helpers\DrawHelper.cs" />
-    <Compile Include="Models\Styles\Position.cs" />
-    <Compile Include="Extensions\CGExtensions.cs" />
-    <Compile Include="Abstract\Renders\IAxisRender.cs" />
-    <Compile Include="Abstract\Renders\IXAxisRender.cs" />
-    <Compile Include="Abstract\Renders\IYAxisRender.cs" />
-    <Compile Include="Implementation\Renders\XAxisRender.cs" />
-    <Compile Include="Models\Renders\Axis\AxisStyle.cs" />
-    <Compile Include="Models\Renders\Axis\XAxisStyle.cs" />
-    <Compile Include="Models\Renders\Axis\XAxisPosition.cs" />
-    <Compile Include="Models\Renders\Axis\YAxisStyle.cs" />
-    <Compile Include="Implementation\Renders\YAxisRender.cs" />
-    <Compile Include="Abstract\Handlers\Tap\IPointTapHandler.cs" />
-    <Compile Include="Implementation\Handlers\Tap\PointTapHandler.cs" />
-    <Compile Include="Abstract\Handlers\Highlight\IHighlightHandler.cs" />
-    <Compile Include="Implementation\Axises\BaseAxis.cs" />
-    <Compile Include="Views\Chart\ChartView.cs" />
-    <Compile Include="Implementation\DataSources\PointEntryChartDataSource.cs" />
-    <Compile Include="Implementation\Entries\EntryPointWrapper.cs" />
-    <Compile Include="Abstract\Managers\IManager.cs" />
-    <Compile Include="Implementation\Manager\DescreteManager.cs" />
-    <Compile Include="Abstract\Renders\IManualRender.cs" />
-    <Compile Include="Implementation\Renders\BaseRender.cs" />
-    <Compile Include="Implementation\Manager\BaseManager.cs" />
-    <Compile Include="Models\Renders\Axis\YAxisPosition.cs" />
-    <Compile Include="Models\Styles\GridStyle.cs" />
-    <Compile Include="Abstract\Handlers\Highlight\IPointHighlightHandler.cs" />
-    <Compile Include="Abstract\Axises\IAxisRangeProvider.cs" />
-    <Compile Include="Implementation\Axises\EntriesCountAxisRangeProvider.cs" />
-    <Compile Include="Implementation\Axises\MultiplierAxisRangeProvider.cs" />
-    <Compile Include="Implementation\Axises\OffsetAxisRangeProvider.cs" />
-    <Compile Include="Implementation\Axises\PointRangeProvider.cs" />
-    <Compile Include="Abstract\Axises\IAxisValuesPositionsProvider.cs" />
-    <Compile Include="Implementation\Axises\StepAxisValuesPositionsProvider.cs" />
-    <Compile Include="Implementation\Axises\CountAxisValuesPositionsProvider.cs" />
-    <Compile Include="Implementation\Handlers\Tap\BaseTapHandler.cs" />
-    <Compile Include="Abstract\Handlers\Tap\ITapHandler.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0-ios</TargetFramework>
+        <OutputType>Library</OutputType>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+
+
+        <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+        <ApplicationId>emportal</ApplicationId>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Properties\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Properties\" />
+    </ItemGroup>
 </Project>
