@@ -96,7 +96,7 @@ namespace XCharts.iOS.Implementation.ViewPort
 
             decelerationStartTime = CAAnimation.CurrentMediaTime();
 
-            link.AddToRunLoop(NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
+            link.AddToRunLoop(NSRunLoop.Current, NSRunLoopMode.Default);
         }
 
         protected virtual void InitMovement(IViewPort viewPort, CGPoint positionToMove)
@@ -121,7 +121,7 @@ namespace XCharts.iOS.Implementation.ViewPort
 
             decelerationStartTime = CAAnimation.CurrentMediaTime();
 
-            link.AddToRunLoop(NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
+            link.AddToRunLoop(NSRunLoop.Current, NSRunLoopMode.Default);
         }
 
         protected virtual void OnDisplayLinkLoop()

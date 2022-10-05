@@ -71,13 +71,17 @@ namespace XCharts.iOS.Helpers
 
             textStyle.Color.SetColor();
 
-            var textRect = new CGRect(new CGPoint(), text.StringSize(textStyle.Font));
+            var textString = new NSString(text);
+
+            var size = textString.GetSizeUsingAttributes(new UIStringAttributes() { Font = textStyle.Font });
+
+            var textRect = new CGRect(new CGPoint(), size);
 
             position = position.Add(textStyle.Offset);
 
             textRect = textRect.LocateAtPosition(position, textStyle.Position);
 
-            text.DrawString(textRect, textStyle.Font);
+            textString.DrawString(textRect, textStyle.Font);
 
             UIGraphics.PopContext();
         }
